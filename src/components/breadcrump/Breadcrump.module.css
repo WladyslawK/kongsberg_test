@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+
+}
+a {
+    color: black
+}
+span{
+    margin-left: 1rem;
+}
+b{
+    margin-left: 1rem;
+}
+a:hover{
+    color: black;
+}
+b:hover{
+    color: #2EB67D;
+}

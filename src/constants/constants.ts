@@ -1,5 +1,7 @@
+import {BreadcrumpType} from "../components/breadcrump/Breadcrump";
+
 export const menuItems = ['all characters']
-export const charactersTableHead = ['Name', 'Status', 'species', 'location']
+export const charactersTableHead = ['Name', 'Status', 'Species', 'Origin']
 
 export const speciesFilter = ['Human', 'Alien', 'Humanoid', 'Poopybutthole', 'Mythological Creature', 'Unknown', 'Animal', 'Robot', 'Cronenberg']
 
@@ -13,3 +15,15 @@ export enum APP_STATUS {
   FAILED = 'failed'
 
 }
+
+export const NAVIGATION: BreadcrumpType[] = [
+  {
+    id: 1,
+    title: "HOME",
+    link: "/",
+  }, {
+    id: 1,
+    title: "CHARACTER DETAILS",
+    link: "",
+  },
+]

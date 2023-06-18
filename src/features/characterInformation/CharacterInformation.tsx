@@ -9,7 +9,7 @@ import {Button} from "@mui/material"
 //types & constants imports
 import {CharacterDomainType} from "api/characters-api"
 import {AppStatusType} from "app/appSlice"
-import {APP_STATUS} from "constants/constants"
+import {APP_STATUS, NAVIGATION} from "constants/constants"
 
 //hooks imports
 import {useAppDispatch, useAppSelector} from "hooks/reduxHooks"
@@ -22,6 +22,7 @@ import {CharacterInfoSkeleton} from "components/characterInfoSkeleton/CharacterI
 
 //style import
 import s from 'features/characterInformation/Charactersinformation.module.css'
+import {Breadcrump} from "../../components/breadcrump/Breadcrump";
 
 
 
@@ -43,35 +44,42 @@ export const CharacterInformation = () => {
 
   return (
     <>
+
       {
         appStatus === APP_STATUS.LOADING ?
           <CharacterInfoSkeleton /> :
-          <section className={s.mainContainer}>
-            <div className={s.characterMainBlock}>
-              <h1>Character Details</h1>
-              <div className={s.imgBlock}>
-                <img className={s.characterImage} src={character && character.image} alt="character image"/>
-              </div>
-              <p><b>{character && character.name}</b></p>
-
-              <Button onClick={showDetailsHandler} variant='contained'>More information</Button>
+          <div>
+            <div className={s.container}>
+              <Breadcrump navigation={NAVIGATION}/>
             </div>
+            <section className={s.mainContainer}>
+              <div className={s.characterMainBlock}>
+                <h1>Character Details</h1>
+                <div className={s.imgBlock}>
+                  <img className={s.characterImage} src={character && character.image} alt="character image"/>
+                </div>
+                <p><b>{character && character.name}</b></p>
 
-            {showDetails ?
-              <div className={s.detailsContainer}>
-                <div className={s.leftDetails}>
-                  <p><b>Gender:</b> {character && character.gender}</p>
-                  <p><b>Species:</b> {character && character.species}</p>
-                  <p><b>Status:</b> {character && character.status}</p>
-                </div>
-                <div className={s.rightDetails}>
-                  <p><b>Type:</b> {character && character.type ? character.type : 'no type'}</p>
-                  <p><b>Origin:</b> {character && character.origin.name}</p>
-                  <p><b>Location:</b> {character && character.location.name}</p>
-                </div>
-              </div> : ''
-            }
-          </section>
+                <Button onClick={showDetailsHandler} variant='contained'>More information</Button>
+              </div>
+
+              {showDetails ?
+                <div className={s.detailsContainer}>
+                  <div className={s.leftDetails}>
+                    <p><b>Gender:</b> {character && character.gender}</p>
+                    <p><b>Species:</b> {character && character.species}</p>
+                    <p><b>Status:</b> {character && character.status}</p>
+                  </div>
+                  <div className={s.rightDetails}>
+                    <p><b>Type:</b> {character && character.type ? character.type : 'no type'}</p>
+                    <p><b>Origin:</b> {character && character.origin.name}</p>
+                    <p><b>Location:</b> {character && character.location.name}</p>
+                  </div>
+                </div> : ''
+              }
+            </section>
+          </div>
+
       }
     </>
   )

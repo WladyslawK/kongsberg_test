@@ -30,7 +30,7 @@ export const MobileViewTableCells = () => {
       <p><b>Name:</b> {name}</p>
       <p><b>Status:</b> {capitalizeFirstLetter(status)}</p>
       <p><b>Species:</b> {capitalizeFirstLetter(species)}</p>
-      <p><b>Location:</b> <span>{location.name}</span></p>
+      <p><b>Origin:</b> <span>{location.name}</span></p>
       <p></p>
     </div>
   ))

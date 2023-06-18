@@ -8,7 +8,8 @@ import {CustomPagination} from "components/customPagination/CustomPagination"
 //style import
 import s from 'features/allCharactersPage/AllCharactersPage.module.css'
 import {useAppSelector} from "../../hooks/reduxHooks";
-import {APP_STATUS} from "../../constants/constants";
+import {APP_STATUS, NAVIGATION} from "../../constants/constants";
+import {Breadcrump} from "../../components/breadcrump/Breadcrump";
 
 export const AllCharactersPage = () => {
 
