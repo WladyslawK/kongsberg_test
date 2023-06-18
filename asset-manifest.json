@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kongsberg_test/static/css/main.79c305a8.css",
+    "main.js": "/kongsberg_test/static/js/main.ed0804ec.js",
+    "static/js/787.994fd13e.chunk.js": "/kongsberg_test/static/js/787.994fd13e.chunk.js",
+    "static/media/background.jpg": "/kongsberg_test/static/media/background.6e1eff8a644a9ae28199.jpg",
+    "static/media/logo.jpg": "/kongsberg_test/static/media/logo.dc53ef83f0ce45b3ea7a.jpg",
+    "index.html": "/kongsberg_test/index.html",
+    "main.79c305a8.css.map": "/kongsberg_test/static/css/main.79c305a8.css.map",
+    "main.ed0804ec.js.map": "/kongsberg_test/static/js/main.ed0804ec.js.map",
+    "787.994fd13e.chunk.js.map": "/kongsberg_test/static/js/787.994fd13e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79c305a8.css",
+    "static/js/main.ed0804ec.js"
+  ]
+}
