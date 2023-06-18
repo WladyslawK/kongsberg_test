@@ -25,12 +25,13 @@ export const MobileViewTableCells = () => {
     navigate(`${PATH.CHARACTER_INFO}/${id}`)
   }
 
-  const body = rows.map(({id, name, species, status, url}) => (
+  const body = rows.map(({id, name, species, status, location}) => (
     <div key={id} className={s.cellContainer}>
       <p><b>Name:</b> {name}</p>
       <p><b>Status:</b> {capitalizeFirstLetter(status)}</p>
       <p><b>Species:</b> {capitalizeFirstLetter(species)}</p>
-      <p><span onClick={() => openCharacterInfoHandler(id)} className={s.linkItem}>{url}</span></p>
+      <p><b>Location:</b> <span onClick={() => openCharacterInfoHandler(id)}>{location.name}</span></p>
+      <p></p>
     </div>
   ))
 
